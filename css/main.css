@@ -7,7 +7,8 @@ body {
 	display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1em;  
+    font-size: 1em;
+    flex-basis: 400px;  
 }
 
 .container{
@@ -92,6 +93,7 @@ header nav ul li a{
     justify-content: center;
     align-items: center; 
     flex-flow: row wrap;
+    flex-basis: 400px;
 }
 
 .main-image {
