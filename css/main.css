@@ -59,7 +59,8 @@ header {
 
 header h1 {
 	margin: 0;
-	padding: 38px 0 20px;
+	padding: 38px 20px 20px 20px;
+	border-bottom: 3px solid #77a466; 
 	width: 100%;
 }
 header h1 span {
@@ -67,7 +68,7 @@ header h1 span {
 }
 
 header nav {
-	padding: 16px 0;
+	padding: 20px 0;
 	width: 100%;
 }
 header nav ul {
@@ -77,10 +78,11 @@ header nav ul {
 header nav ul li {
 	text-transform: uppercase;
 	font-weight: 700;
-	font-size: .975em;
+	font-size: .875em;
 	padding: 10px 0;
 	list-style: none;
 }
+
 header nav ul li a{
 	text-decoration: none;
 	color:#77a466;
@@ -95,17 +97,11 @@ header nav ul li a{
     flex-flow: row wrap;
 }
 
-.main-image {
-	height: auto;
-}
 .main-image img {
 	width: 100%;
 	border-bottom: 3px solid #77a466;
 }
 
-.main-title {
-	height: auto;
-}
 .main-title h3 {
 	text-align: left;
 	padding: 5px 0;
@@ -124,15 +120,6 @@ header nav ul li a{
 	border-top: 1px solid #eee;
 }
 
-.section-one h4 {
-	padding: 10px 0;
-}
-
-.section-two h4,
-.section-three h4 {
-	padding: 10px 0;
-}
-
 .menu {
 	list-style: none;
 	padding: 0;
@@ -146,11 +133,13 @@ header nav ul li a{
 	color: #333;
 	font-size: 1em;
 	line-height: 21px;
+	padding: 0;
 }
 
 .address {
 	font-size: 1em;
 	line-height: 24px;
+	padding: 0;
 }
 
 /*The widths are in a percentage!*/
@@ -168,4 +157,52 @@ footer span {
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: .875em;
+}
+
+
+/*** Breakpoints and css styles for Tablets and Desktop ***/
+    /* Tablet styles here */
+@media all and (min-width:768px) {
+  .bottom-section {
+  	justify-content: space-between;
+  	align-items: flex-start;
+  	border-top: 1px solid #eee;
+	}
+
+  .section-one,
+  .section-two,
+  .section-three {
+  	flex-basis: 30%;
+  	border-top: none;
+
+	}
+
+  .section-two {
+  	border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    padding: 0 20px;
+	}
+}
+
+    /* Desktop styles here */ 
+@media all and (min-width:1200px) {
+  header {
+  	justify-content: space-between;
+  }
+ 
+  header h1 {
+  	width: 30%;
+  	padding: 0;
+    border-bottom: none;
+    text-align: left;
+  }
+
+  header nav {
+  	width: 40%;
+  }
+ 
+  header nav ul {
+    display: flex;
+    justify-content: space-between;
+  }
 }
